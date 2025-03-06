@@ -9,10 +9,11 @@
 }
 
 .logo img {
-    width: 250px;
+   width: 250px;
 }
 
 body {
+    
     margin: 0;
     padding: 0;
     background-color: #FFEAC5; /* Same as .home */
@@ -22,8 +23,13 @@ body {
 
 html, body {
     overflow-x: hidden;
+    height: 100%;
     display: flex;
     flex-direction: column;
+}
+
+.wrapper {
+    flex: 1; /* This makes the content area expand and push the footer down */
 }
 
 
@@ -107,35 +113,105 @@ html, body {
 
 
 
-
-
-
-/* Home Section */
-.home {
-    background-color: #FFEAC5;
-    padding: 0 7vw;
-    margin: 0;
-    box-sizing: border-box;
-    padding-bottom: 85px;
-   
+/* =======================
+   Hero Section
+   ======================= */
+.container {
+    margin-top: -120px;
+    margin-bottom:-90px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between; /* Aligns sections properly */
+    align-items: center;
+    height: 100vh;
+    padding: 0 50px; /* Adds spacing from the edges */
 }
 
-/* Main Slide Layout */
+.headline{
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* =======================
+   Slider Section
+   ======================= */
+.slider-container {
+    position: relative;
+    width: 50%;
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.slide {
+    display: none;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.active {
+    display: block;
+}
+
+/* Navigation buttons for slider */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.prev:hover, .next:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+
+
+/* =======================
+   Menu Section
+   ======================= */
+
+.Top-container{
+    z-index: 0;
+    position: relative;
+    max-width: 90%;
+    margin: auto;
+    padding: 20px;
+    border-radius: 10px;
+    
+
+}
+
 .main_slide {
     display: flex;
     align-items: center;
     flex-wrap: wrap-reverse;
-    gap: 30px;
+    gap: 50px;
     padding: 20px 0;
     padding-top: 100px;
     padding-bottom: 90px;
 }
 
-.wrapper {
-    flex: 1;
-}
-
-/* Text Content */
 .content {
     flex: 1;
     font-size: 30px;
@@ -234,16 +310,93 @@ html, body {
     background: rgba(0, 0, 0, 0.8);
 }
 
-.footer {
-    position: absolute; 
-    bottom: 0; 
-    width: 100%; 
-    background: #333; 
-    color: white; 
-    text-align: center; 
-    padding: 10px;
+.menu-container {
+    margin: 0;
+    padding-bottom: 500px; /* Match footer height */
+    box-sizing: border-box;
+    z-index: 0;
+    position: relative;
+    max-width: 80%;
+    margin: auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
 }
 
+/* =======================
+   Tab Navigation
+   ======================= */
+.tabs {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Allows tabs to wrap on smaller screens */
+    margin-bottom: 20px;
+}
+
+.tab {
+    padding: 10px 20px;
+    cursor: pointer;
+    font-weight: bold;
+    border-bottom: 3px solid transparent;
+}
+
+.tab.active {
+    border-bottom: 3px solid orange;
+    color: orange;
+}
+
+
+
+.menu-items {
+    display: none;
+}
+
+
+
+.menu-items.active {
+    display: block;
+}
+
+/* Responsive menu items */
+.menu-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+    border-bottom: 1px solid #ddd;
+    gap: 20px;
+    width: 100%;
+    margin: auto;
+}
+
+.menu-item img {
+    width: 200px;
+    height: 200px;
+    border-radius: 5px;
+    
+}
+
+.menu-item .info {
+    flex-grow: 1;
+    font-size: 18px;
+    text-align: left;
+}
+
+
+.menu-item .price {
+    font-weight: bold;
+    color: orange;
+    text-align: left;
+    font-size: 22px;
+}
+
+.main-content {
+    flex: 1;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Footer sticks to the bottom */
 .footer {
     position: relative;
     width: 100%;
@@ -256,6 +409,7 @@ html, body {
     margin-top: auto;
 }
 
+/* Responsive layout adjustments */
 .footer-content {
     display: flex;
     justify-content: space-around;
@@ -271,7 +425,6 @@ html, body {
 }
 
 .footer-section h4 {
-    color:#f2dab2;
     margin-bottom: 15px;
     font-size: 18px;
     border-bottom: 2px solid #FFEAC5;
@@ -280,12 +433,9 @@ html, body {
 
 .footer-section ul {
     display: flex;
-    gap: 15px; /* Adjust spacing between items */
+    gap: 15px;
     justify-content: center;
     padding: 0;
-}
-
-.footer-section ul li {
     list-style: none;
 }
 
@@ -300,15 +450,9 @@ html, body {
     text-decoration: underline;
 }
 
-
-.footer-section ul li a:hover {
-    color: #FFD700;
-    text-decoration: underline;
-}
-
 .social-icons a {
     margin: 0 10px;
-    color: #b9975c;
+    color: #FFEAC5;
     font-size: 24px;
     text-decoration: none;
     transition: transform 0.3s;
@@ -328,6 +472,108 @@ html, body {
 }
 
 
+@media screen and (max-width: 900px) {
+    .container {
+        flex-direction: column; /* Stack items vertically */
+        text-align: center;
+        padding: 130px 80px 80px;
+    }
+
+    .hero-text,
+    .slider-container {
+        width: 100%; /* Full width on small screens */
+        padding: 10px;
+    }
+
+    .prev, .next {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .menu-container {
+        margin-top: 90px;
+        max-width: 95%;
+    }
+    .menu-item {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .menu-item img {
+        width: 200px;
+        height: 200px;
+        margin-bottom: 10px;
+    }
+
+    .menu-item .price {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .menu-container {
+        max-width: 95%;
+        position:static;
+    }
+
+    .menu-item {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px 0;
+    }
+
+    .menu-item img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .menu-item .info {
+        font-size: 16px;
+    }
+
+    .menu-item .price {
+        font-size: 18px;
+    }
+
+    .tab {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .tab {
+        padding: 5px 10px;
+        font-size: 12px;
+    }
+
+    .menu-item img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .menu-item .info {
+        font-size: 14px;
+    }
+
+    .menu-item .price {
+        font-size: 16px;
+    }
+}
+
+
+span {
+    color: #6C4E31;
+    text-decoration: underline;
+    text-underline-offset: 10px;
+    text-decoration-color: #663406;
+}
+
+
+/*footer section*/
 /* Responsive */
 @media (max-width: 600px) {
     .footer-content {
@@ -345,45 +591,19 @@ html, body {
     }
 }
 
-@media (max-width: 768px) {
-    .main_slide {
-        flex-direction: column;
-    }
-
-    #slideContainer {
-        order: 1;
-    }
-    #slideContainer {
-        width: 100%;
-        padding:10px
-    }
-
-    .content {
-        order: 2;
-    }
-    .content {
-        font-size: large;
-        align-items: center;
-    }
-
-    .slide img {
-        width: 100%;
-        padding: 10px;
-        height: auto;
-        object-fit: cover;
-        cursor: pointer;
-    }
-    
-
-
-}
-
-
 
 @media only screen and (max-width: 768px) {
     .header .nav, .header .account {
         display: none;
+
     }
+
+    .Top-container{
+        margin-top: -50px;
+        margin-bottom: -130px;
+        
+    }
+
 
     .search {
         display: flex;
@@ -424,6 +644,7 @@ html, body {
         right: -100%;
         background-color:  #FFDBB5;
         transition: right 0.5s ease;
+        z-index:1;
     }
 
     .headerbar .account, .headerbar .nav {
@@ -454,6 +675,7 @@ html, body {
         font-size: 15px;
         margin-top: 5px;
         cursor: pointer;
+        
     }
 
     .headerbar .nav a {
@@ -467,12 +689,54 @@ html, body {
         background-color:  #e0b983;
         box-shadow: 0 2px 15px rgb(135, 107, 107);
         padding: 15px;
+    
     }
 
     .headerbar .account ul {
         justify-content: space-between;
     }
 }
+
+
+
+
+
+
+@media (max-width: 768px) {
+    .main_slide {
+        margin-top: -100;
+        flex-direction: column;
+    }
+
+    #slideContainer {
+        order: 1;
+    }
+    #slideContainer {
+        width:100px;
+        height: auto;
+    }
+
+    .content {
+        order: 2;
+    }
+    .content {
+        font-size: larger;
+    }
+
+    .content p {
+        font-size: 50px;
+    }
+
+    .slide img {
+        height: auto;
+        object-fit:contain;
+        cursor: pointer;
+    }
+}
+
+
+
+
 
 @media only screen and (max-width: 768px) {
     .main_slide div:nth-child(1){
@@ -482,7 +746,7 @@ html, body {
     .main_slide div:nth-child(1) p{
         padding-top: 5px;
         margin: 10px 0;
-        font-size : 18px;
+        font-size : 20px;
     }
 
     .red_btn{
