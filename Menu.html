@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vailty Tea | Menu</title>
+    <link rel="stylesheet" href="Menu.css">
+    <link rel="shortcut icon" href="./image/Logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="header">
+            <div class="headerbar">
+                <div class="account">
+                    <ul>
+                        <a href="">
+                            <li>
+                                <i class="fa-solid fa-house-chimney"></i>
+                            </li>
+                        </a>
+                        <a href="#" id="searchicon1">
+                            <li>
+                                <i class="fa-solid fa-magnifying-glass searchicon"></i>
+                            </li>
+                        </a>
+                        <div class="search" id="searchinput1">
+                            <input type="search" placeholder="Search...">
+                            <i class="fa-solid fa-magnifying-glass srchicon"></i>
+                        </div>
+                        <a href="">
+                            <li>
+                                <i class="fa-solid fa-user" id="user-mb"></i>
+                            </li>
+                        </a>
+                    </ul>
+                </div>
+                <div class="nav">
+                    <ul>
+                        <a href="Index.html">
+                            <li>Home</li>
+                        </a>
+                        <a href="">
+                            <li>Service</li>
+                        </a>
+                        <a href="">
+                            <li>Menu</li>
+                        </a>
+                        <a href="">
+                            <li>Order</li>
+                        </a>
+                        <a href="">
+                            <li>About</li>
+                        </a>
+                        <a href="">
+                            <li>Contact</li>
+                        </a>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="logo">
+                <img src="./image/new_logo.png" alt="logo">
+            </div>
+
+            <div class="bar">
+                <i class="fa-solid fa-bars"></i>
+                <i class="fa-solid fa-xmark" id="hdcross"></i>
+            </div>
+
+            <nav class="nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="service.html">Service</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="order.html">Order</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="account">
+                <ul>
+                    <li><a href="#"><i class="fa-solid fa-house-chimney"></i></a></li>
+                    <li><a href="#" id="searchicon2"><i class="fa-solid fa-magnifying-glass"></i></a></li>
+                    <div class="search" id="searchinput2">
+                        <input type="search" placeholder="Search...">
+                        <i class="fa-solid fa-magnifying-glass srchicon"></i>
+                    </div>
+                    <li><a href="#"><i class="fa-solid fa-user" id="user-mb"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    
+
+    <div class="Top-container">
+        <div class="main_slide">
+        <div class="content">
+            <h1>Delicious Drinks & Sandwiches<span> That Offers the Best Taste and Comfort</span></h1>
+            <p>
+                Settle into our cozy nook and enjoy handcrafted sandwiches and refreshing drinks, perfect for a quick break or leisurely hangout. Savor every bite, relax, and let the simple pleasures of good food and great company make your day.
+            </p>
+            
+
+            <button class="red_btn" aria-label="Visit now">
+                Order Now <i class="fa-solid fa-arrow-right-long"></i>
+            </button>
+        </div>
+
+        <div class="slider-container">
+            <div class="slide active">
+                <img src="./image/3.png" alt="Image of product 1">
+            </div>
+            <div class="slide">
+                <img src="./image/1.png" alt="Image of product 2">
+            </div>
+            <div class="slide">
+                <img src="./image/2.png" alt="Image of product 3">
+            </div>
+        
+            <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+            <button class="next" onclick="changeSlide(1)">&#10095;</button>
+        </div>
+    
+        
+    </div>
+    </div>
+
+
+    <div class="menu-container">
+        <div class="tabs">
+            <div class="tab active" onclick="showMenu('warm')">☕ Warm Drinks</div>
+            <div class="tab" onclick="showMenu('cold')">🥤 Cold Drinks</div>
+            <div class="tab" onclick="showMenu('sandwich')">🥪 Sandwiches</div>
+        </div>
+        
+        <div id="warm" class="menu-items active">
+            <div class="menu-item">
+                <img src="./image/warm1.jpg" alt="Drink">
+                <div class="info"><b>Hot Almond N Cream Drink</b><br>Freshly brewed coffee with a rich blend of almond and velvety cream for a smooth, nutty flavor.</div>
+                <div class="price"> ₱250</div>
+            </div>
+
+            <div class="menu-item">
+                <img src="./image/warm2.jpg" alt="Drink">
+                <div class="info"><b>Comforting Coffee Milk</b><br>Warm, freshly brewed coffee mixed with creamy milk, perfect for a cozy, soothing sip.</div>
+                <div class="price">₱180</div>
+            </div>
+
+            <div class="menu-item">
+                <img src="./image/warm3.jpg" alt="Drink">
+                <div class="info"><b>Hot Cranberry Cider</b><br>A fragrant, spiced cranberry drink served hot — a sweet and tangy treat for chilly days.</div>
+                <div class="price">₱220</div>
+            </div>
+
+            <div class="menu-item">
+                <img src="./image/warm4.jpg" alt="Drink">
+                <div class="info"><b>Orange Spiced Cider</b><br>A vibrant mix of citrus and spices, this hot cider is bursting with flavor and warmth.</div>
+                <div class="price">₱200</div>
+            </div>
+
+            <div class="menu-item">
+                <img src="./image/warm5.jpg" alt="Drink">
+                <div class="info"><b>Irish coffee</b><br>Bold, freshly brewed coffee infused with a hint of whiskey and topped with luscious cream.</div>
+                <div class="price">₱270</div>
+            </div>
+            
+        </div>
+
+        <div id="cold" class="menu-items">
+            <div class="menu-item">
+                <img src="./image/cold1.jpg" alt="Drink">
+                <div class="info"><b>Kale Smoothie With Pineapple and Banana</b><br>A refreshing blend of nutrient-rich kale, sweet pineapple, and creamy banana for a healthy boost.
+                    </div>
+                <div class="price">₱220</div>
+            </div>
+            
+            <div class="menu-item">
+                <img src="./image/cold2.webp" alt="Drink">
+                <div class="info"><b>Watermelon Frozen Slushie</b><br> Icy, sweet, and ultra-refreshing, this slushie captures the taste of summer with every sip.
+                    </div>
+                <div class="price">₱180</div>
+            </div>
+
+            <div class="menu-item">
+                <img src="./image/cold3.webp" alt="Drink">
+                <div class="info"><b>Kombucha-Blood Orange Mule</b><br>A zesty mix of tangy blood orange and fizzy kombucha for a bold and invigorating drink.
+                    </div>
+                <div class="price">₱240</div>
+            </div>
+
+            <div class="menu-item">
+                <img src="./image/cold4.jpg" alt="Drink">
+                <div class="info"><b>Vietnamese Ice Coffee</b><br>Strong, robust coffee poured over ice and sweetened with creamy condensed milk.</div>
+                <div class="price">₱200</div>
+            </div>
+
+
+            <div class="menu-item">
+                <img src="./image/cold5.jpg" alt="Drink">
+                <div class="info"><b>Tropical Mango Juice</b><br>Pure, sun-ripened mangoes blended into a luscious juice bursting with tropical flavor.
+                    </div>
+                <div class="price">₱190</div>
+            </div>
+
+
+            <div class="menu-item">
+                <img src="./image/cold6.jpg" alt="Drink">
+                <div class="info"><b>High Protein Banana Smoothie</b><br>A creamy, protein-packed smoothie with ripe bananas — perfect for a post-workout treat.
+                    </div>
+                <div class="price">₱230</div>
+            </div>
+
+
+            <div class="menu-item">
+                <img src="./image/cold7.jpg" alt="Drink">
+                <div class="info"><b>Buko Pandan Float</b><br>A delightful Filipino classic with coconut, pandan jelly, and a scoop of ice cream on top.
+                    </div>
+                <div class="price">₱210</div>
+            </div>
+
+        </div>
+
+        <div id="sandwich" class="menu-items">
+            <div class="menu-item">
+                <img src="./image/sand1.jpg" alt="Sandwich">
+                <div class="info"><b>Caramelized Onion Cheeseburgers</b><br>Juicy beef patties topped with sweet caramelized onions and melted cheese, served on a toasted bun.
+                   </div>
+                <div class="price">₱320</div>
+            </div>
+
+            <div class="menu-item">
+                <img src="./image/sand2.jpg" alt="Sandwich">
+                <div class="info"><b>Ultimate Reuben Grilled Cheese</b><br>A crispy grilled sandwich loaded with corned beef, tangy sauerkraut, Swiss cheese, and Thousand Island dressing.
+                    </div>
+                <div class="price">₱280</div>
+            </div>
+
+            <div class="menu-item">
+                <img src="./image/sand3.jpg" alt="Sandwich">
+                <div class="info"><b>Grilled Beef & Broccoli Wraps</b><br>Tender beef slices and sautéed broccoli wrapped in a soft tortilla with savory garlic sauce.
+                    </div>
+                <div class="price">₱260</div>
+            </div>
+
+
+            <div class="menu-item">
+                <img src="./image/sand5.jpg" alt="Sandwich">
+                <div class="info"><b>Pandcake Hamburger with Bacon</b><br>A unique twist on a classic burger — fluffy pancakes sandwiching a beef patty, crispy bacon, and maple syrup.
+                    </div>
+                <div class="price">₱300</div>
+            </div>
+
+
+            <div class="menu-item">
+                <img src="./image/sand4.jpg" alt="Sandwich">
+                <div class="info"><b>8pcs of Beef Empanada</b><br>Golden, flaky pastry stuffed with seasoned ground beef and vegetables, perfect for sharing.
+                    </div>
+                <div class="price">₱240</div>
+            </div>
+
+
+            <div class="menu-item">
+                <img src="./image/sand6.jpg" alt="Sandwich">
+                <div class="info"><b>Cheesy Shrimp Sandwhich</b><br>Succulent shrimp coated in a creamy cheese sauce, nestled in a buttery toasted roll.
+                   </div>
+                <div class="price"> ₱310</div>
+            </div>
+
+
+            <div class="menu-item">
+                <img src="./image/sand7.jpg" alt="Sandwich">
+                <div class="info"><b>Overloaded Tuna Sandwhich</b><br>A hearty sandwich packed with tuna, fresh veggies, and a zesty mayo dressing on whole-grain bread.
+                    </div>
+                <div class="price">₱270</div>
+            </div>
+
+
+            <div class="menu-item">
+                <img src="./image/sand8.jpg" alt="Sandwich">
+                <div class="info"><b>Club Meatball Subs</b><br>Soft sub rolls filled with juicy meatballs, marinara sauce, and melted mozzarella cheese.
+                    </div>
+                <div class="price">₱290</div>
+            </div>
+
+
+            <div class="menu-item">
+                <img src="./image/sand9.jpg" alt="Sandwich">
+                <div class="info"><b>Juicy Cheesesteak</b><br>Thinly sliced steak with sautéed onions, peppers, and gooey cheese on a toasted hoagie roll.
+                    </div>
+                <div class="price">₱350</div>
+            </div>
+            
+            <div class="menu-item">
+                <img src="./image/sand10.jpg" alt="Sandwich">
+                <div class="info"><b>Hungarian Chili Dog</b><br>A smoky Hungarian sausage topped with spicy chili, cheddar cheese, and jalapeños in a warm bun.
+                    </div>
+                <div class="price">₱280</div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h4>About Us</h4>
+                <p>Your reliable source for quality products and services.</p>
+            </div>
+            <div class="footer-section links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Products</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section social">
+                <h4>Follow Us</h4>
+                <div class="social-icons">
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2025 Your Company | All Rights Reserved
+        </div>
+    </footer>
+
+    <script src="Menu.js"></script>
+</body>
+</html>
